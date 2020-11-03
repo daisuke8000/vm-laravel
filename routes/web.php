@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 // Route::get('/sample', [TestController::class,'index']);
 Route::resource('tests/sample', TestController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
